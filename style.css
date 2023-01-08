@@ -235,12 +235,15 @@ body{
     margin-top: 73px;
     margin-bottom: 30px;
 }
-@media screen and (max-width: 980px){
+@media screen and (max-width: 985px){
   .main-div{
     justify-content: space-between;
   }
   .logo-div{
     margin-left: 0;
+  }
+  .logo-div1{
+    margin-left: 10px;
   }
   .logo-div img{
     width: 26px;
@@ -257,6 +260,9 @@ body{
   .keypoint-div a{
     padding: 18px 1px;
     font-size: 12px;
+  }
+  .keypoint-div1 a {
+    padding: 24px 10px;
   }
   .logout{
     padding: 0;
