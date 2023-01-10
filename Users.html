@@ -11,7 +11,10 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/2761c47128.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2761c47128.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -29,10 +32,10 @@
         <a href="Users.html" class="users-page">Users</a>
         <a class="logout" onclick="logOut()">Logout</a>
       </div>
-      <div class="menubar" >
+      <div class="menubar">
         <div class="menuIcon"><i class="fa-solid fa-bars"></i></div>
-       <div class="closeIcon"><i class="fa-solid fa-xmark"></i></div> </div>
-
+        <div class="closeIcon"><i class="fa-solid fa-xmark"></i></div>
+      </div>
     </div>
     <div class="container table3-name">
       <div class="header">
@@ -149,21 +152,17 @@
           row.removeChild(tableRows[x]);
         }
 
-       
-
-        
         ThirdinitializeTable();
       }
 
-      var menu_bar = document.querySelector('.menubar');
-var main_div = document.querySelector('.main-div');
+      var menu_bar = document.querySelector(".menubar");
+      var main_div = document.querySelector(".main-div");
 
-menu_bar.addEventListener("click", () => togglebar());
+      menu_bar.addEventListener("click", () => togglebar());
 
-const togglebar = () =>{
-  
-    main_div.classList.toggle("active");
-}
+      const togglebar = () => {
+        main_div.classList.toggle("active");
+      };
     </script>
   </body>
 </html>

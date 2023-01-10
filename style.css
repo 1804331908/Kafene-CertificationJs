@@ -11,7 +11,7 @@ body{
 
 .main-div{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 100%;
     align-items: center;
     box-shadow: 0 2px 4px #ccc;
@@ -20,7 +20,7 @@ body{
     top: 0;
     left: 0;
     height: 60px;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 .menubar{
   display: none;
@@ -35,6 +35,8 @@ body{
 }
 .keypoint-div1{
   display: flex;
+  align-items: center;
+  margin-left: 300px;
 }
 .keypoint-div1 a{
   display: inline-block;
@@ -222,6 +224,7 @@ body{
   .main-div{
     justify-content: space-between;
     position: relative;
+    padding: 0px 15px;
   }
   .keypoint-div1{
     /* display: none; */
@@ -278,16 +281,13 @@ body{
   .logo-text{
     font-size: 18px;
   }
-  /* .keypoint-div{
-    margin-right: 124px;
+   .keypoint-div1{
+    /* margin-right: 124px; */
     margin-left: 0;
   }
-  .keypoint-div a{
-    padding: 18px 1px;
-    font-size: 12px;
-  } */
+
   .keypoint-div1 a {
-    padding: 24px 10px;
+    padding: 15px 0px;
   }
   .logout{
     padding: 0;
