@@ -2,7 +2,12 @@
     box-sizing: border-box;
     font-family: poppins;
 }
-
+html{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+}
 
 .main-div{
     display: flex;
@@ -14,58 +19,36 @@
     position: fixed;
     top: 0;
     left: 0;
+    height: 60px;
+    padding: 0 20px;
+}
+.menubar{
+  display: none;
+}
+.closeIcon{
+  display: none;
 }
 
-.logo-div{
-    display: flex;
-    align-items: center;
-    margin-left: -63px;
-}
 .logo-div1{
   display: flex;
   align-items: center;
-  margin-left: -425px;
 }
 .keypoint-div1{
   display: flex;
-  margin-left: -825px;
-  /* padding: 15px; */
 }
 .keypoint-div1 a{
   display: inline-block;
   text-decoration: none;
   color: rgba(0,0,0,.8);
-  padding: 24px 16px;
+  /* padding: 24px 16px; */
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .6px;
-  margin: 0 10px;
+  margin: 0 30px;
   font-family: poppins;
   cursor: pointer;
 }
-   
 
-.logo-div img {
-    width: 24px;
-    height: 28px;
-}
-.keypoint-div{
-    display: flex;
-    margin-left: -245px;
-    /* padding: 15px; */
-}
-.keypoint-div a{
-    display: inline-block;
-    text-decoration: none;
-    color: rgba(0,0,0,.8);
-    padding: 24px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .6px;
-    margin: 0 10px;
-    font-family: poppins;
-    cursor: pointer;
-}
 .logo-text {
     font-size: 24px;
     letter-spacing: -1px;
@@ -238,7 +221,49 @@ body{
 @media screen and (max-width: 985px){
   .main-div{
     justify-content: space-between;
+    position: relative;
   }
+  .keypoint-div1{
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background: #e7f5ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(100%);
+    transition: all 0.3s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+  }
+  .active .keypoint-div1{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .menubar .menuIcon{
+    display: none;
+  }
+  .active .menubar .closeIcon{
+    display: block;
+  }
+  .menubar{
+    display: block;
+    z-index: 999;
+  }
+  .menuIcon{
+    font-size: 25px;
+    z-index: 999;
+  }
+ 
   .logo-div{
     margin-left: 0;
   }
@@ -253,14 +278,14 @@ body{
   .logo-text{
     font-size: 18px;
   }
-  .keypoint-div{
+  /* .keypoint-div{
     margin-right: 124px;
     margin-left: 0;
   }
   .keypoint-div a{
     padding: 18px 1px;
     font-size: 12px;
-  }
+  } */
   .keypoint-div1 a {
     padding: 24px 10px;
   }
@@ -272,6 +297,10 @@ body{
   .form-div{
     max-width: 270px;
     padding: 22px;
+  }
+  .form-main-div{
+    margin-top: 60px;
+    margin-bottom: 40px;
   }
   .header{
     margin-top: 65px;

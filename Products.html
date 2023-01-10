@@ -11,25 +11,28 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2761c47128.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div class="main-div">
-      <div class="logo-div">
+      <div class="logo-div1">
         <img
           src="	https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
           alt=""
         />
         <p class="logo-text">Kafene</p>
       </div>
-      <div class="keypoint-div">
+      <div class="keypoint-div1">
         <a href="Orders.html" class="order-page">Orders</a>
         <a href="Products.html" class="products-page">Products</a>
         <a href="Users.html" class="users-page">Users</a>
-      </div>
-      <div>
         <a class="logout" onclick="logOut()">Logout</a>
       </div>
+      <div class="menubar" >
+        <div class="menuIcon"><i class="fa-solid fa-bars"></i></div>
+       <div class="closeIcon"><i class="fa-solid fa-xmark"></i></div> </div>
+
     </div>
     <div class="container table2-name">
       <div class="header">
@@ -191,6 +194,16 @@ window.location.href = "index.html"
           tableBody2.appendChild(element2);
         });
       }
+
+      var menu_bar = document.querySelector('.menubar');
+var main_div = document.querySelector('.main-div');
+
+menu_bar.addEventListener("click", () => togglebar());
+
+const togglebar = () =>{
+  
+    main_div.classList.toggle("active");
+}
     </script>
   </body>
 </html>
